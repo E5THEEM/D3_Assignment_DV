@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- The header which consist of documentation and title of website  -->
+        <meta charset="utf-8"/>
+        <title>Air Pollution</title>
+        <meta name="description" content="Data visualisation"/>
+        <meta name="Keywords" content="HTML, CSS"/>
+        <meta name="Author" content="Jonathan lee"/>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="Assets/Css/DeforestStyle.css">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+        
+</head>
+
+<body>
+    <h1>Forest Area of the world (%) (2020) </h1>
+    
+    <div id="mySidenavs" class="sidenavs">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="Story.html">Story</a>
+    <a href="WorldPopulation.html">World Population</a>
+    <a href="AirPollution.html">Air Pollution</a>
+    <a href="AnimalExtinction.html">Animal Extinction</a>
+    <a href="Deforestation.html">Deforestation</a>
+    <a href="GreenHouseEffect.html">Greenhouse</a>
+  </div>
+  
+  <div id="main">
+    <div id="mySidenav" class="sidenav" onclick="openNav()">
+    <a href="#" id = "about">Menu</a>
+    </div>
+  </div>
+    
+    <p style="float: right;"><button id="MAP" onclick="document.location='Deforestation2.html'">LINE CHART</a></button></p>
+    <script src="Assets/Javascript/Deforest.js"></script> 
+    <script src="Assets/Javascript/nav.js"></script> 
+    <svg width="1280" height="600"></svg>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- The header which consist of documentation and title of website  -->
+        <meta charset="utf-8"/>
+        <title>Air Pollution</title>
+        <meta name="description" content="Data visualisation"/>
+        <meta name="Keywords" content="HTML, CSS"/>
+        <meta name="Author" content="Jonathan lee"/>
+        <link rel="stylesheet" href="Assets/Css/DeforestStyle.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+        
+</head>
+
+<body>
+    <h1> Area of Forest (%) and World Population Comparison (1990-2017)  </h1>
+    
+    <div id="mySidenavs" class="sidenavs">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Story.html">Story</a>
+        <a href="WorldPopulation.html">World Population</a>
+        <a href="AirPollution.html">Air Pollution</a>
+        <a href="AnimalExtinction.html">Animal Extinction</a>
+        <a href="Deforestation.html">Deforestation</a>
+        <a href="GreenHouseEffect.html">Greenhouse</a>
+      </div>
+      
+      <div id="main">
+        <div id="mySidenav" class="sidenav" onclick="openNav()">
+        <a href="#" id = "about">Menu</a>
+        </div>
+      </div>
+
+    <p style="float: right;"><button id="CHART" onclick="document.location='Deforestation.html'">MAP</a></button></p>
+    <script src="Assets/Javascript/Deforest2.js"></script> 
+    <script src="Assets/Javascript/nav.js"></script> 
+    <svg width="1280" height="600"></svg>
+    <p id = "chart"></p>
+    <div>
+        <svg id="my_dataviz"></svg>
+    </div>
+
+    <script>
+        // select the svg area
+        var svg = d3.select("#my_dataviz")
+        // Handmade legend
+        svg.append("rect").attr("x",200).attr("y",3).attr("width",30).attr("height",30).style("fill", "red")
+        svg.append("rect").attr("x",400).attr("y",3).attr("width",30).attr("height",30).style("fill", "blue")
+        svg.append("text").attr("x", 240).attr("y", 20).text("Forest %").style("font-size", "15px").attr("alignment-baseline","middle")
+        svg.append("text").attr("x", 440).attr("y", 20).text("World Population").style("font-size", "15px").attr("alignment-baseline","middle")
+    </script>
+
+</body>
+
+</html>
