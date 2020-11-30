@@ -1,0 +1,112 @@
+body {
+   transition: background-color .5s;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+#my_dataviz
+{
+    height: 100px;
+    width: 1000px;
+}
+
+.line {
+  fill: none;
+  stroke: blue;
+  stroke-width: 3px;
+}
+
+.axisSteelBlue text{
+  fill: steelblue;
+}
+
+.axisRed text{
+  fill: red;
+}
+
+div.tooltip {	
+  position: absolute;			
+  text-align: center;			
+  width: 70px;					
+  height: 30px;					
+  padding: 2px;				
+  font: 12px sans-serif;	
+  color: white;	
+  background: black;	
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+.tooltip-date, .tooltip-likes {
+  font-weight: bold;
+}
+
+/* Nav */
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#about {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+.sidenavs {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenavs a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavs a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavs .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

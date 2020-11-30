@@ -1,0 +1,228 @@
+h1{
+    text-align: center;
+    /*color: white;*/
+}
+
+.line {
+  fill: none;
+  stroke: blue;
+  stroke-width: 3px;
+}
+
+.axisSteelBlue text{
+  fill: steelblue;
+}
+
+.axisRed text{
+  fill: red;
+}
+
+div.tooltip {	
+  position: absolute;			
+  text-align: center;			
+  width: 70px;					
+  height: 30px;					
+  padding: 2px;				
+  font: 12px sans-serif;	
+  color: white;	
+  background: black;	
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+.tooltip-date, .tooltip-likes {
+  font-weight: bold;
+}
+
+
+#my_dataviz
+{
+    height: 100px;
+    width: 1000px;
+}
+
+
+.countries {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+  }
+  .legendThreshold {
+      font-size: 12px;
+      font-family: sans-serif;
+  }
+  .caption {
+      fill: #000;
+      text-anchor: start;
+      font-weight: bold;
+  }
+
+
+
+/* Try Tool Tips
+.tooltip {
+  width: 94px;
+  padding: 4px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  position: absolute;
+  background-color: white;
+  font-size: 14px;
+  pointer-events: none;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.tooltip div {
+  margin: 3px 0;
+}
+
+.tooltip-date, .tooltip-likes {
+  font-weight: bold;
+}
+*/
+
+:root {
+  --backgroundColor: rgba(246, 241, 209);
+  --colorShadeA: rgb(106, 163, 137);
+  --colorShadeB: rgb(121, 186, 156);
+  --colorShadeC: rgb(150, 232, 195);
+  --colorShadeD: rgb(187, 232, 211);
+  --colorShadeE: rgb(205, 255, 232);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 10px;
+    color:var(--colorShadeA);
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+button#MAP,button#CHART  {
+   padding: 20px 20px;
+   border: 2px solid var(--colorShadeA);
+   border-radius: 1em;
+   background: var(--colorShadeE);
+   transform-style: preserve-3d;
+   transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+button#MAP::before,button#CHART::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+ transform: translate3d(0, 0.75em, -1em);
+     transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button#MAP:hover ,button#CHART:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+
+button#MAP::before,button#CHART::before{
+  transform: translate3d(0, 0.75em, -1em);
+}
+button#MAP:active,button#CHART:active{
+            transform: translate(0em, 0.75em);
+}
+button#MAP:active::before,button#CHART:active::before{
+  transform: translate3d(0, 0, -1em);
+  
+      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+
+}
+
+/* Nav */
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#about {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+.sidenavs {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenavs a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavs a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavs .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
